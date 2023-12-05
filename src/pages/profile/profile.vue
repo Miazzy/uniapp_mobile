@@ -18,6 +18,12 @@ const visible = ref(false);
 const open = () => {
   visible.value = true;
 };
+
+const list = [
+    "https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_1.jpg",
+    "https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_2.jpg",
+    "https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_3.jpg",
+  ];
 </script>
 
 <template>
@@ -167,6 +173,51 @@ const open = () => {
       </iui-dialog>
       <tui-alert :show="show" @click="hideAlert" @cancel="hideAlert"> 这是一个alert弹框 </tui-alert>
     </view>
+
+    <view class="title-content" style="">statistic示例</view>
+    <view class="statistic-content">
+
+      <iui-statistic title="Download" :value="125670" separator> </iui-statistic>
+      <iui-statistic extra="Comment" :value="40509" :precision="2"></iui-statistic>
+
+      <iui-statistic title="New User" :value="125670" separator>
+        <template #suffix>
+          <iui-icon name="arrowup" style="font-weight: 600"></iui-icon>
+        </template>
+      </iui-statistic>
+
+      <iui-statistic
+        title="User Growth Rate"
+        :value="50.52"
+        :precision="2"
+        :valueStyle="{ color: '#00B42A' }"
+      >
+        <template #prefix>
+          <iui-icon name="arrowup" style="font-weight: 600"></iui-icon>
+        </template>
+        <template #suffix> % </template>
+      </iui-statistic>
+    </view>
+
+    <view class="title-content" style="">noticebar示例</view>
+    <view class="noticebar-content">
+      <iui-noticebar> Note that this is a reminder message. </iui-noticebar>
+
+      <iui-noticebar icon="sound">
+        Note that this is a reminder message.
+      </iui-noticebar>
+
+      <iui-noticebar icon="sound" animation>
+        Note that this is a reminder message. The message is long, but I can choose to
+        have it scroll or wrap, as it does now.
+      </iui-noticebar>
+    </view>
+
+    <view class="title-content" style="">swiper示例</view>
+    <view class="swiper-content">
+      <iui-swiper :list="list"></iui-swiper>
+    </view>
+
   </view>
 </template>
 
@@ -250,5 +301,17 @@ const open = () => {
     color: #303030;
     padding-left: 24px;
   }
+}
+
+.statistic-content {
+  padding: 0px 5px 0px 5px;
+}
+
+.noticebar-content {
+  padding: 0px 5px 0px 5px;
+}
+
+.swiper-content {
+  padding: 0px 2px 0px 2px;
 }
 </style>
