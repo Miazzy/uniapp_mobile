@@ -1,0 +1,102 @@
+{
+  "pages": [
+    {
+      "name": "index",
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "name": "home",
+      "path": "pages/home/home",
+      "style": {
+        "navigationBarTitleText": "home",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "name": "profile",
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "个人"
+      }
+    },
+    {
+      "name": "user",
+      "path": "pages/user/user",
+      "style": {
+        "navigationBarTitleText": "我的",
+			  "navigationStyle": "custom"
+      }
+    },
+  ],
+  "subPackages": [
+    {
+      "root": "pages/test",
+      "pages": [
+        {
+          "name": "test",
+          "path": "test",
+          "style": {
+            "navigationBarTitleText": "测试"
+          }
+        },
+      ]
+    },
+    {
+      "root": "pages/login",
+      "pages": [
+        {
+          "name": "login",
+          "path": "login",
+          "style": {
+            "navigationBarTitleText": "登录"
+          }
+        }
+      ]
+    },
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+		"navigationBarTitleText": "集维管理",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#F8F8F8",
+		"titleNView": false,
+		"rpxCalcMaxDeviceWidth": 960,
+		"rpxCalcBaseDeviceWidth": 375,
+		"rpxCalcIncludeWidth": 750
+  },
+  "tabBar": {
+    "color": "#282828",
+		"selectedColor": "#fc4141",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/1-001.png",
+				"selectedIconPath": "static/images/1-002.png",
+        "text": "目录"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/images/2-001.png",
+				"selectedIconPath": "static/images/2-002.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "static/images/3-001.png",
+				"selectedIconPath": "static/images/3-002.png",
+        "text": "个人"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "static/images/4-001.png",
+				"selectedIconPath": "static/images/4-002.png",
+        "text": "我的"
+      }
+    ]
+  }
+}
