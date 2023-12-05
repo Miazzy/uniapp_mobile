@@ -11,4 +11,6 @@ onHide(() => {
 });
 </script>
 
-<style></style>
+<style lang="scss">
+@import 'iui-design/style/index.scss';
+</style>

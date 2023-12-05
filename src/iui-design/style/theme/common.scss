@@ -1,0 +1,189 @@
+@use '../color/global.scss';
+
+// 通用
+$prefix: '--iui';
+
+
+// 颜色
+$color-white: var(#{$prefix}-white);
+$color-black: var(#{$prefix}-black);
+$color-transparent: transparent;
+
+
+// 命名
+$primary-1: var(#{$prefix}-primary-1);
+$primary-2: var(#{$prefix}-primary-2);
+$primary-3: var(#{$prefix}-primary-3);
+$primary-4: var(#{$prefix}-primary-4);
+$primary-5: var(#{$prefix}-primary-5);
+$primary-6: var(#{$prefix}-primary-6);
+$primary-7: var(#{$prefix}-primary-7);
+$primary-8: var(#{$prefix}-primary-8);
+$primary-9: var(#{$prefix}-primary-9);
+
+
+// 成功
+$success-1: var(#{$prefix}-success-1);
+$success-2: var(#{$prefix}-success-2);
+$success-3: var(#{$prefix}-success-3);
+$success-4: var(#{$prefix}-success-4);
+$success-5: var(#{$prefix}-success-5);
+$success-6: var(#{$prefix}-success-6);
+$success-7: var(#{$prefix}-success-7);
+$success-8: var(#{$prefix}-success-8);
+$success-9: var(#{$prefix}-success-9);
+
+
+// 错误
+$danger-1: var(#{$prefix}-error-1);
+$danger-2: var(#{$prefix}-error-2);
+$danger-3: var(#{$prefix}-error-3);
+$danger-4: var(#{$prefix}-error-4);
+$danger-5: var(#{$prefix}-error-5);
+$danger-6: var(#{$prefix}-error-6);
+$danger-7: var(#{$prefix}-error-7);
+$danger-8: var(#{$prefix}-error-8);
+$danger-9: var(#{$prefix}-error-9);
+
+// 警示
+$warning-1: var(#{$prefix}-warning-1);
+$warning-2: var(#{$prefix}-warning-2);
+$warning-3: var(#{$prefix}-warning-3);
+$warning-4: var(#{$prefix}-warning-4);
+$warning-5: var(#{$prefix}-warning-5);
+$warning-6: var(#{$prefix}-warning-6);
+$warning-7: var(#{$prefix}-warning-7);
+$warning-8: var(#{$prefix}-warning-8);
+$warning-9: var(#{$prefix}-warning-9);
+
+// 信息
+$info-1: var(#{$prefix}-gray-1);
+$info-2: var(#{$prefix}-gray-2);
+$info-3: var(#{$prefix}-gray-3);
+$info-4: var(#{$prefix}-gray-4);
+$info-5: var(#{$prefix}-gray-5);
+$info-6: var(#{$prefix}-gray-6);
+$info-7: var(#{$prefix}-gray-7);
+$info-8: var(#{$prefix}-gray-8);
+$info-9: var(#{$prefix}-gray-9);
+
+
+// 边框颜色
+$color-border: global.$color-border;
+$color-border-dark: global.$color-border-dark;
+$color-border-light: global.$color-border-light;
+$color-border-lighten: global.$color-border-lighten;
+
+// 背景颜色
+$color-bg: global.$color-bg; // 整体背景色
+$color-bg-white: global.$color-bg-white; // 白色背景色
+$color-bg-secondary: global.$color-bg-secondary; // 次要背景色
+$color-bg-active: global.$color-bg-active; // 活跃背景色
+$color-bg-light: global.$color-bg-light; // 浅背景色
+$color-bg-opacity: global.$color-bg-opacity; // 透明背景色
+
+
+// 文字颜色
+$color-text-dark: global.$color-text-dark; // 强调/标题
+$color-text: global.$color-text; // 正文
+$color-text-light: global.$color-text-light; // 次要信息
+$color-text-lighten: global.$color-text-lighten; // 置灰信息
+$color-text-input: global.$color-text; // 输入框文字
+$color-text-input-placeholder: global.$color-text-lighten; // 输入框文字
+$color-text-disabled: var(#{$prefix}-text-disabled); // 禁用文字
+
+// 圆角
+$border-radius-none: global.$border-radius-none;
+$border-radius-small: global.$border-radius-small;
+$border-radius-medium: global.$border-radius-medium;
+$border-radius-large: global.$border-radius-large;
+$border-radius-huge: global.$border-radius-huge;
+$border-radius-round: global.$border-radius-round;
+
+
+// 字体大小
+$font-size-display: global.$font-size-display;
+$font-size-title: global.$font-size-title;
+$font-size-body: global.$font-size-body;
+
+$font-size-huge: global.$font-size-huge;
+$font-size-large: global.$font-size-large;
+$font-size-medium: global.$font-size-medium;
+$font-size-small: global.$font-size-small;
+$font-size-mini: global.$font-size-mini;
+
+
+// 尺寸
+$size-none: 0;
+$size-1: 4px;
+$size-2: 8px;
+$size-3: 12px;
+$size-4: 16px;
+$size-5: 20px;
+$size-6: 24px;
+$size-7: 28px;
+$size-8: 32px;
+$size-9: 36px;
+$size-10: 40px;
+$size-11: 44px;
+$size-12: 48px;
+$size-13: 52px;
+$size-14: 56px;
+$size-15: 60px;
+$size-16: 64px;
+$size-17: 68px;
+$size-18: 72px;
+$size-19: 76px;
+$size-20: 80px;
+$size-21: 84px;
+$size-22: 88px;
+$size-23: 92px;
+$size-24: 96px;
+$size-25: 100px;
+$size-26: 104px;
+$size-27: 108px;
+$size-28: 112px;
+$size-29: 116px;
+$size-30: 120px;
+$size-31: 124px;
+$size-32: 128px;
+$size-33: 132px;
+$size-34: 136px;
+$size-35: 140px;
+$size-36: 144px;
+$size-37: 148px;
+$size-38: 152px;
+$size-39: 156px;
+$size-40: 160px;
+$size-41: 164px;
+$size-42: 168px;
+$size-43: 172px;
+$size-44: 176px;
+$size-45: 180px;
+$size-46: 184px;
+$size-47: 188px;
+$size-48: 192px;
+$size-49: 196px;
+$size-50: 200px;
+
+$size-mini: $size-6;
+$size-small: $size-7;
+$size-medium: $size-8;
+$size-large: $size-9;
+$size-huge: $size-10;
+
+// 图标尺寸
+$icon-mini: $size-6;
+$icon-small: $size-8;
+$icon-medium: $size-10;
+$icon-large: $size-12;
+$icon-huge: $size-14;
+
+// picker
+$picker-title-bg: var(#{$prefix}-picker-title-bg);
+$mp-picker-title-bg: var(#{$prefix}-mp-picker-title-bg);
+
+
+page {
+    line-height: 1.5;
+}

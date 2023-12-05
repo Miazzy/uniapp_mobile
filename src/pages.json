@@ -67,6 +67,15 @@
 		"rpxCalcBaseDeviceWidth": 375,
 		"rpxCalcIncludeWidth": 750
   },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^i-(.*)": "iui-design/components/iui-$1/iui-$1.vue",
+      "^t-(.*)": "thorui-uni/lib/thorui/tui-$1/tui-$1.vue",
+      "^iui-(.*)": "iui-design/components/iui-$1/iui-$1.vue",
+      "^tui-(.*)": "thorui-uni/lib/thorui/tui-$1/tui-$1.vue",
+    }
+  },
   "tabBar": {
     "color": "#282828",
 		"selectedColor": "#fc4141",

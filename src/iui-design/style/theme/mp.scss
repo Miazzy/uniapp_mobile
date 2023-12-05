@@ -1,0 +1,30 @@
+// 小程序特有样式
+
+iui-space {
+    width: 100%;
+}
+
+iui-button,
+iui-grid-item,
+iui-cell,
+iui-checkbox,
+iui-radio,
+iui-swiper,
+iui-image,
+iui-icon {
+    display: contents;
+}
+
+
+
+iui-picker {
+    :deep(.iui-popup-container-content) {
+        background-color: $mp-picker-title-bg !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    picker-view-column {
+        background-color: $color-bg-secondary !important;
+    }
+}
