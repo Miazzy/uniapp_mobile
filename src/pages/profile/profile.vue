@@ -233,8 +233,8 @@ onMounted(() => {
       >
 
       <tui-divider>默认divider</tui-divider>
-
       <tui-scroll-top :scrollTop="0"></tui-scroll-top>
+      <!-- <tui-textarea placeholder="请输入内容"></tui-textarea> -->
     </view>
 
     <view class="title-content" style="">Button示例</view>
