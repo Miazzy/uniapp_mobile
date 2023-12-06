@@ -19,15 +19,224 @@ const open = () => {
   visible.value = true;
 };
 
+const card = reactive({
+  img: {
+    url: 'https://www.thorui.cn/h5/static/images/news/avatar_1.jpg'
+  },
+  title: {
+    text: 'CSDN云计算'
+  },
+  tag: {
+    text: '1小时前'
+  },
+  header: {
+    bgcolor: '#F7F7F7',
+    line: true
+  }
+});
+
+const toast = ref();
+const dataList = ref([]);
 const list = [
-    "https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_1.jpg",
-    "https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_2.jpg",
-    "https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_3.jpg",
-  ];
+  'https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_1.jpg',
+  'https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_2.jpg',
+  'https://sf1-cdn-tos.toutiaostatic.com/obj/arco-mobile/_static_/large_image_3.jpg'
+];
+
+dataList.value = [
+  {
+    name: 'refresh',
+    size: 30
+  },
+  {
+    name: 'search',
+    size: 30
+  },
+  {
+    name: 'close',
+    size: 30
+  },
+  {
+    name: 'shut',
+    size: 30
+  },
+  {
+    name: 'plus',
+    size: 30
+  },
+  {
+    name: 'star',
+    size: 30
+  },
+  {
+    name: 'revoke',
+    size: 30
+  },
+  {
+    name: 'shop',
+    size: 30
+  },
+  {
+    name: 'shop',
+    size: 30
+  },
+  {
+    name: 'order',
+    size: 30
+  },
+  {
+    name: 'feedback',
+    size: 30
+  },
+  {
+    name: 'like',
+    size: 30
+  }
+];
+
+onMounted(() => {
+  const options = {
+    msg: '一般消息提示~',
+    duration: 2000
+  };
+});
 </script>
 
 <template>
   <view>
+    <view class="title-content" style="">Icon示例</view>
+    <view class="tui-content">
+      <tui-icon name="about" :size="32"></tui-icon>
+      <tui-icon name="about-fill" :size="48" unit="rpx"></tui-icon>
+      <tui-icon name="about" size="{{32}}"></tui-icon>
+      <tui-icon name="about-fill" size="{{48}}" unit="rpx"></tui-icon>
+    </view>
+
+    <view class="title-content" style="">Button示例</view>
+    <view class="tui-content">
+      <tui-button height="68rpx">页面主操作</tui-button>
+      <tui-button type="warning" height="68rpx">页面次要操作</tui-button>
+      <tui-button type="danger" height="68rpx">页面次要操作</tui-button>
+      <tui-button type="gray-primary" height="68rpx">页面次要操作</tui-button>
+      <tui-button plain height="68rpx">页面主操作</tui-button>
+      <tui-button type="warning" plain height="68rpx">页面次要操作</tui-button>
+      <tui-button type="danger" plain height="68rpx">页面次要操作</tui-button>
+      <tui-button height="68rpx">页面主操作</tui-button>
+      <tui-button type="warning" shape="circle" height="68rpx"
+        >页面次要操作</tui-button
+      >
+      <tui-button type="danger" shape="rightAngle" height="68rpx"
+        >页面次要操作</tui-button
+      >
+      <tui-button disabled height="68rpx">页面主操作</tui-button>
+      <tui-button type="warning" disabled height="68rpx"
+        >页面次要操作</tui-button
+      >
+      <tui-button type="danger" disabled height="68rpx"
+        >页面次要操作</tui-button
+      >
+      <tui-button disabled loading height="68rpx">页面主操作</tui-button>
+      <tui-button type="warning" disabled loading height="68rpx"
+        >页面次要操作</tui-button
+      >
+      <tui-button type="danger" disabled loading height="68rpx"
+        >页面次要操作</tui-button
+      >
+      <tui-button width="372rpx" height="68rpx">页面主操作</tui-button>
+    </view>
+
+    <view class="title-content" style="">Tag示例</view>
+    <view class="tui-content">
+      <tui-tag type="black">实心标签</tui-tag>
+      <tui-tag type="white">实心标签</tui-tag>
+      <tui-tag type="danger">实心标签</tui-tag>
+      <tui-tag type="warning">实心标签</tui-tag>
+      <tui-tag type="black" padding="12rpx">实心标签</tui-tag>
+      <tui-tag type="white" padding="20rpx 30rpx">实心标签</tui-tag>
+      <tui-tag type="danger" padding="20rpx 30rpx">实心标签</tui-tag>
+      <tui-tag type="warning" padding="8rpx" size="24rpx">实心标签</tui-tag>
+      <tui-tag type="black" plain>实心标签</tui-tag>
+      <tui-tag type="white" plain>实心标签</tui-tag>
+      <tui-tag type="danger" plain>实心标签</tui-tag>
+      <tui-tag type="warning" plain>实心标签</tui-tag>
+      <tui-tag type="black">实心标签</tui-tag>
+      <tui-tag type="white" shape="circle">实心标签</tui-tag>
+      <tui-tag type="danger" shape="circleLeft">实心标签</tui-tag>
+      <tui-tag type="warning" shape="circleRight">实心标签</tui-tag>
+    </view>
+
+    <view class="title-content" style="">Badge示例</view>
+    <view class="tui-content">
+      <view class="tui-badge-item" style="width: 2.2rem">
+        <tui-icon name="message"></tui-icon>
+        <tui-badge
+          type="danger"
+          absolute
+          scale-ratio="{{0.8}}"
+          translate-x="40%"
+          top="0.125rem"
+          >9</tui-badge
+        >
+      </view>
+    </view>
+
+    <view class="title-content" style="">List示例</view>
+    <view class="tui-content">
+      <tui-list-view title="不带箭头">
+        <tui-list-cell>不带箭头</tui-list-cell>
+        <tui-list-cell>不带箭头</tui-list-cell>
+        <tui-list-cell>不带箭头</tui-list-cell>
+      </tui-list-view>
+
+      <!-- hover 默认为true，所以不需要设置 -->
+      <tui-list-view title="带箭头，有点击效果" color="#777">
+        <tui-list-cell arrow> 带箭头，有点击效果 </tui-list-cell>
+        <tui-list-cell arrow> 带箭头，有点击效果 </tui-list-cell>
+        <tui-list-cell arrow> 带箭头，有点击效果 </tui-list-cell>
+      </tui-list-view>
+
+      <tui-card :image="card.img" :title="card.title" :tag="card.tag">
+        <template #body>
+          <view class="tui-default"> 默认卡片内容部分 slot=>body </view>
+        </template>
+        <template #footer>
+          <view class="tui-default"> 默认卡片底部 slot=>footer </view>
+        </template>
+      </tui-card>
+
+      <tui-grid>
+        <block v-for="(item, index) in dataList" :key="index">
+          <tui-grid-item :cell="5">
+            <view class="tui-grid-icon">
+              <tui-icon :name="item.name"></tui-icon>
+            </view>
+            <text class="tui-grid-label">{{ item.name }}</text>
+          </tui-grid-item>
+        </block>
+      </tui-grid>
+
+      <!-- <tui-loading></tui-loading> -->
+      <tui-loadmore :index="1"></tui-loadmore>
+      <tui-loadmore :index="2"></tui-loadmore>
+      <tui-loadmore :index="3"></tui-loadmore>
+
+      <tui-nomore text="NO MORE"></tui-nomore>
+      <tui-nomore text="我是有底线的"></tui-nomore>
+
+      <tui-tips
+        ref="toast"
+        background-color="#5677fc"
+        color="#fff"
+        :size="30"
+        position="center"
+        >提示消息</tui-tips
+      >
+
+      <tui-divider>默认divider</tui-divider>
+
+      <tui-scroll-top :scrollTop="0"></tui-scroll-top>
+    </view>
+
     <view class="title-content" style="">Button示例</view>
     <view class="button-content">
       <i-button>Button</i-button>
@@ -161,8 +370,16 @@ const list = [
 
     <view class="title-content" style="">alert示例</view>
     <view class="alert-content">
-      <i-button type="primary" inline @click="open" style="width: 120px;margin-right: 10px;">打开弹框1</i-button>
-      <i-button type="primary" inline @click="openAlert" style="width: 120px;">打开弹框2</i-button>
+      <i-button
+        type="primary"
+        inline
+        style="width: 120px; margin-right: 10px"
+        @click="open"
+        >打开弹框1</i-button
+      >
+      <i-button type="primary" inline style="width: 120px" @click="openAlert"
+        >打开弹框2</i-button
+      >
       <iui-dialog
         v-model="visible"
         :cancel="false"
@@ -171,14 +388,20 @@ const list = [
       >
         I am a single-line content of the body, center-aligned by default.
       </iui-dialog>
-      <tui-alert :show="show" @click="hideAlert" @cancel="hideAlert"> 这是一个alert弹框 </tui-alert>
+      <tui-alert :show="show" @click="hideAlert" @cancel="hideAlert">
+        这是一个alert弹框
+      </tui-alert>
     </view>
 
     <view class="title-content" style="">statistic示例</view>
     <view class="statistic-content">
-
-      <iui-statistic title="Download" :value="125670" separator> </iui-statistic>
-      <iui-statistic extra="Comment" :value="40509" :precision="2"></iui-statistic>
+      <iui-statistic title="Download" :value="125670" separator>
+      </iui-statistic>
+      <iui-statistic
+        extra="Comment"
+        :value="40509"
+        :precision="2"
+      ></iui-statistic>
 
       <iui-statistic title="New User" :value="125670" separator>
         <template #suffix>
@@ -190,7 +413,7 @@ const list = [
         title="User Growth Rate"
         :value="50.52"
         :precision="2"
-        :valueStyle="{ color: '#00B42A' }"
+        :value-style="{ color: '#00B42A' }"
       >
         <template #prefix>
           <iui-icon name="arrowup" style="font-weight: 600"></iui-icon>
@@ -208,8 +431,8 @@ const list = [
       </iui-noticebar>
 
       <iui-noticebar icon="sound" animation>
-        Note that this is a reminder message. The message is long, but I can choose to
-        have it scroll or wrap, as it does now.
+        Note that this is a reminder message. The message is long, but I can
+        choose to have it scroll or wrap, as it does now.
       </iui-noticebar>
     </view>
 
@@ -217,7 +440,6 @@ const list = [
     <view class="swiper-content">
       <iui-swiper :list="list"></iui-swiper>
     </view>
-
   </view>
 </template>
 
@@ -313,5 +535,40 @@ const list = [
 
 .swiper-content {
   padding: 0px 2px 0px 2px;
+}
+
+.tui-content {
+  padding: 0px 2px 0px 2px;
+
+  :deep(.tui-btn) {
+    margin: 2px 0px 2px 0px;
+  }
+
+  .tui-badge-item {
+    position: relative;
+  }
+
+  .tui-default {
+    padding: 20rpx 30rpx;
+  }
+  .tui-grid-icon {
+    width: 64rpx;
+    height: 64rpx;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .tui-grid-label {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: #333;
+    font-size: 28rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10rpx;
+  }
 }
 </style>
