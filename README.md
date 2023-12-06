@@ -1,6 +1,6 @@
 # uniapp + vue3  项目工程化搭建
 
-## 简介
+## 简介 
 
 `uni-app + vue3.x` 项目工程化搭建，集成 `ESLint`、`Prettier`、`Stylelint`、`husky`、`lint-staged` 、`commitlint`等。
 
